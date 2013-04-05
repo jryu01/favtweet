@@ -1,0 +1,152 @@
+/* Default Settings */
+
+.tweet-page, .tweet-detail-page, .user-page {
+	background: #C1C1C1;
+}
+/*Set font*/
+.tweet-page .ui-listview .ui-li-desc{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+}
+/*set the margin arround contents*/
+.tweet-detail-page .ui-listview,
+.tweet-page .ui-listview,
+.user-page .ui-listview
+ {
+	margin: -5px;
+}
+/*Inherit the border-radius for thumbnail image from parent*/
+.tweet-page .ui-listview .ui-li-thumb,
+.tweet-detail-page .ui-listview .ui-li-thumb,
+.user-page .ui-listview img {
+	margin: 8px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.tweet-detail-page .ui-listview .ui-link-inherit,
+.tweet-page .ui-listview .ui-link-inherit {
+	margin-left: -30px;
+}
+.tweet-detail-page .ui-listview .ui-link-inherit p {
+	margin-left: -20px;
+}
+.tweet-detail-page .ui-listview .ui-link-inherit {
+	width: 200px;
+}
+.user-page .ui-listview .ui-li-desc,
+.tweet-detail-page .ui-listview .ui-li-desc {
+	font-size: 14px;
+	padding: 0px 20px;
+	line-height: 1.5;
+}
+.mcontent {
+	margin: auto;
+	width: 95%;
+	border-radius: 10px;
+	padding-bottom: 10px;
+}
+
+/* brakepoin wt 768px, 3 colum layout */
+@media all and (min-width: 768px) {
+
+	/*set the margin arround contents*/
+	.tweet-page .ui-listview {
+		margin: auto;
+	}
+	.tweet-detail-page .ui-listview,
+	.user-page .ui-listview
+	 {
+		margin: auto;
+		max-width: 768px;
+	}
+	.tweet-page .ui-content {
+		padding: 10px;
+	}
+	.tweet-page .ui-listview .ui-li.ui-btn {
+		float: left;
+		width: 30.9333%;/*3.333% including margin(both side 1.2%) */
+		height: 202px;
+		margin: 8px 1.2%;
+		border-width: 0;	
+	}
+	.tweet-page .ui-listview .ui-li.ui-btn-inner {
+		border: inherit;
+		border-width: 1px;
+		margin: -1px;
+	}
+	
+	.tweet-page .ui-listview .ui-btn-inner,
+	.tweet-page .ui-listview .ui-btn-text,
+	.tweet-page .ui-listview .ui-link-inherit,
+	.tweet-page .ui-listview .ui-li-thumb {
+		display: block;
+		overflow: hidden;
+	}
+	.tweet-page .ui-listview .ui-link-inherit {
+		padding: 0 !important;
+		position: relative;
+		margin: 0;
+	}
+	/* Inherit the border-radius in case of an inset listview. */
+	.tweet-page .ui-listview .ui-li,
+	.tweet-page .ui-listview .ui-btn-text,
+	.tweet-page .ui-listview .ui-link-inherit{
+		-webkit-border-radius: inherit;
+		border-radius: inherit;
+		height: 100%;
+		width: 100%;
+	}
+	/* image postion */
+	.tweet-page .ui-listview .ui-li-thumb {
+		margin-left: 5px;
+		position: absolute;
+	}
+	
+	/*wrap text*/
+	.tweet-page .ui-listview .ui-li-desc {
+		white-space: normal;
+		overflow: visible;
+		position: absolute;
+		left: 0;
+		right: 0;
+	}
+	/*Postion text*/ 
+	.tweet-page .ui-listview .name span {
+		display: block;
+	 }	
+	.tweet-page .ui-listview .name {
+		margin-top: 10px;
+		margin-left: 50px;
+		padding: 0 20px;
+		bottom 0;
+		line-height: 1.5;
+	}
+	.tweet-page .ui-listview .text {
+		margin-top: 70px;
+		margin-left: 0px;
+		padding: 0 20px;
+		line-height: 1.5;
+	}
+
+	.user-page .ui-listview .ui-li-desc,
+	.tweet-detail-page .ui-listview .ui-li-desc {
+	font-size: 20px;
+	padding: 0px 20px;
+	line-height: 1.5;
+	}
+}
+/* Secon breakpoint */
+@media all and (min-width: 1020px){
+	.tweet-page .ui-content {
+		padding: 10px;
+	}
+	.tweet-page .ui.listview {
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+	.tweet-page .ui-listview .ui-li.ui-btn {
+		width: 23%;
+		height: 230px;
+		margin: 10px 1%;
+	}
+}
